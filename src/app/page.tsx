@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -78,29 +79,66 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="pt-20 min-h-screen flex items-center justify-center hero-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <div className="mb-8">
-            <div className="w-48 h-48 mx-auto mb-8 bg-gray-300 rounded-full flex items-center justify-center">
-              <span className="text-6xl text-gray-500">👤</span>
+      <section id="hero" className="pt-20 min-h-screen flex items-center justify-center bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* 左侧 - 个人照片 */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 max-w-xs">
+                  <Image 
+                    src="/images/工作照.jpg" 
+                    alt="Junhua Liu" 
+                    width={250}
+                    height={320}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-              Junhua Liu
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Web Developer / Designer
-            </p>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              创造美观、功能性和用户友好的开发者
-            </p>
-          </div>
-          <div className="flex justify-center space-x-6">
-            <a href="#contact" className="bg-white text-accent-primary px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors">
-              联系我
-            </a>
-            <a href="#projects" className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-accent-primary transition-colors">
-              查看作品
-            </a>
+            
+            {/* 右侧 - 个人信息 */}
+            <div className="text-center lg:text-left lg:pl-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Junhua Liu
+              </h1>
+              <div className="mb-8">
+                <p className="text-xl md:text-2xl text-accent-primary mb-4 font-medium">
+                  Web Developer / Designer
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                  创造美观、功能性和用户友好的数字体验。专注于现代化Web开发技术，
+                  致力于将创意想法转化为高质量的产品。
+                </p>
+              </div>
+              
+              {/* 按钮组 */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+                <a href="#contact" className="bg-accent-primary text-white px-8 py-4 rounded-full font-medium hover:bg-accent-secondary transition-all duration-300 hover:scale-105 shadow-lg">
+                  联系我
+                </a>
+                <a href="#projects" className="border-2 border-accent-primary text-accent-primary px-8 py-4 rounded-full font-medium hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-105">
+                  查看作品
+                </a>
+              </div>
+              
+              {/* 社交媒体快捷链接 */}
+              <div className="flex gap-4 justify-center lg:justify-start">
+                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <span className="text-xl">📧</span>
+                </a>
+                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <span className="text-xl">💼</span>
+                </a>
+                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <span className="text-xl">🐙</span>
+                </a>
+                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
+                  <span className="text-xl">🐦</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
