@@ -130,7 +130,7 @@ export default function Home() {
                 <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                   <p className="text-gray-700 italic text-lg leading-relaxed">
                     <span className="text-2xl mr-3">✨</span>
-                    "The highest ideal one can achieve is self-perfection."
+                    &ldquo;The highest ideal one can achieve is self-perfection.&rdquo;
                   </p>
                   <p className="text-sm text-gray-500 mt-2 font-medium">— Personal Philosophy</p>
                 </div>
@@ -138,7 +138,7 @@ export default function Home() {
               
               {/* 行动按钮 */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                <a href="#projects" className="bg-white text-gray-700 px-10 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-centerr">
+                <a href="#projects" className="bg-white text-gray-700 px-10 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
                   <span className="mr-3">🚀</span>
                   View My Work
                 </a>
