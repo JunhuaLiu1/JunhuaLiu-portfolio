@@ -26,30 +26,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* 移动端优先的基础样式 */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
+  /* 移动端最小字体16px */
+  font-size: 16px;
 }
 
-/* Smooth scrolling */
+/* 平滑滚动 */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom styles for portfolio sections */
+/* 移动端优先的section padding */
 .section-padding {
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .section-padding {
     padding: 6rem 2rem;
   }
 }
 
-/* Gradient background for hero */
+/* 渐变背景优化 */
 .hero-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
@@ -67,7 +82,7 @@ html {
   pointer-events: none;
 }
 
-/* Card hover effects */
+/* 卡片悬停效果优化 */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -75,4 +90,53 @@ html {
 .card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 移动端触摸优化 */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* 防止移动端缩放 */
+@media (max-width: 767px) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* 移动端按钮最小尺寸 */
+.mobile-button {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* 移动端文字可读性优化 */
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    line-height: 1.4;
+  }
+  
+  p, span {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
+  }
+}
+
+/* 移动端导航优化 */
+.mobile-nav-item {
+  padding: 0.75rem 1rem;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
 }
