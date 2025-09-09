@@ -81,16 +81,16 @@ export default function Home() {
       {/* Hero Section */}
       <section id="hero" className="pt-20 min-h-screen flex items-center justify-center bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* 左侧 - 个人照片 */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center">
               <div className="relative">
-                <div className="bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 max-w-xs">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl overflow-hidden shadow-xl border border-gray-200 max-w-sm">
                   <Image 
-                    src="/images/工作照.jpg" 
+                    src="/images/profile.jpg" 
                     alt="Junhua Liu" 
-                    width={250}
-                    height={320}
+                    width={320}
+                    height={400}
                     className="w-full h-auto object-cover"
                     priority
                   />
@@ -98,44 +98,53 @@ export default function Home() {
               </div>
             </div>
             
-            {/* 右侧 - 个人信息 */}
-            <div className="text-center lg:text-left lg:pl-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Junhua Liu
-              </h1>
-              <div className="mb-8">
-                <p className="text-xl md:text-2xl text-accent-primary mb-4 font-medium">
-                  Web Developer / Designer
+            {/* 右侧 - 主要内容 */}
+            <div className="text-center lg:text-left space-y-6">
+              {/* 姓名展示 */}
+              <div>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight">
+                  Junhua Liu
+                </h1>
+              </div>
+              
+              {/* 职业标签 */}
+              <div>
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-400 to-indigo-400 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                  <span className="mr-3 text-xl">⚡</span>
+                  Software Engineer | FinTech Developer
+                </div>
+              </div>
+              
+              {/* 价值主张 */}
+              <div className="space-y-4">
+                <p className="text-xl md:text-2xl text-gray-900 leading-relaxed font-medium">
+                  I build <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent font-bold">scalable solutions</span> that solve real-world problems
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                  创造美观、功能性和用户友好的数字体验。专注于现代化Web开发技术，
-                  致力于将创意想法转化为高质量的产品。
+                <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  专注于创造实用的软件产品，让技术真正服务于人们的生活需求
                 </p>
               </div>
               
-              {/* 按钮组 */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
-                <a href="#contact" className="bg-accent-primary text-white px-8 py-4 rounded-full font-medium hover:bg-accent-secondary transition-all duration-300 hover:scale-105 shadow-lg">
-                  联系我
-                </a>
-                <a href="#projects" className="border-2 border-accent-primary text-accent-primary px-8 py-4 rounded-full font-medium hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-105">
-                  查看作品
-                </a>
+              {/* 个人理念 */}
+              <div>
+                <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                  <p className="text-gray-700 italic text-lg leading-relaxed">
+                    <span className="text-2xl mr-3">✨</span>
+                    "The highest ideal one can achieve is self-perfection."
+                  </p>
+                  <p className="text-sm text-gray-500 mt-2 font-medium">— Personal Philosophy</p>
+                </div>
               </div>
               
-              {/* 社交媒体快捷链接 */}
-              <div className="flex gap-4 justify-center lg:justify-start">
-                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
-                  <span className="text-xl">📧</span>
+              {/* 行动按钮 */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                <a href="#projects" className="bg-white text-gray-700 px-10 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-centerr">
+                  <span className="mr-3">🚀</span>
+                  View My Work
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
-                  <span className="text-xl">💼</span>
-                </a>
-                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
-                  <span className="text-xl">🐙</span>
-                </a>
-                <a href="#" className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent-primary hover:text-white transition-all duration-300 hover:scale-110">
-                  <span className="text-xl">🐦</span>
+                <a href="#contact" className="bg-white text-gray-700 px-10 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 hover:border-blue-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                  <span className="mr-3">💬</span>
+                  Contact Me
                 </a>
               </div>
             </div>
@@ -150,14 +159,86 @@ export default function Home() {
             关于我
           </h2>
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
-            <p className="text-lg text-text-gray leading-relaxed mb-6">
-              我是一名充满激情的Web开发者和设计师，专注于创建现代化、响应式的网站和应用程序。
-              拥有5年以上的前端开发经验，熟练掌握最新的技术栈和设计趋势。
-            </p>
-            <p className="text-lg text-text-gray leading-relaxed">
-              我相信好的设计不仅要美观，更要实用。每个项目都是一个新的挑战和学习机会，
-              我致力于将创意想法转化为高质量的数字产品。
-            </p>
+            {/* 个人简介 */}
+            <div className="mb-8">
+              <p className="text-lg text-text-gray leading-relaxed mb-6">
+                I am a passionate software engineer with expertise in full-stack development and financial technology. 
+                I specialize in creating modern, scalable applications and have a keen interest in leveraging technology 
+                to solve complex business challenges in the financial sector.
+              </p>
+              <p className="text-lg text-text-gray leading-relaxed">
+                I believe in writing clean, maintainable code and am always eager to learn new technologies. 
+                Every project is an opportunity to grow and contribute to meaningful digital solutions.
+              </p>
+            </div>
+
+            {/* 教育背景与工作经历 */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <span className="text-2xl mr-3">🎓</span>
+                  教育背景
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-semibold text-gray-800">江西师范大学</p>
+                    <p className="text-gray-600">软件工程 学士学位</p>
+                    <p className="text-sm text-gray-500">2020 - 2024</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <span className="text-2xl mr-3">💼</span>
+                  当前职位
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-semibold text-gray-800">中国银行江西省分行</p>
+                    <p className="text-gray-600">信息科技部 软件工程师</p>
+                    <p className="text-sm text-gray-500">2024 - 至今</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 技术栈与兴趣 */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <span className="text-2xl mr-3">🚀</span>
+                技术栈 & 专业兴趣
+              </h3>
+              <div className="flex flex-wrap gap-3 mb-4">
+                {[
+                  'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 
+                  'Python', 'Java', 'Spring Boot', 'MySQL', 'Redis', 
+                  'Git', 'Docker', 'Linux', 'RESTful API'
+                ].map((tech, index) => (
+                  <span key={index} className="bg-gradient-to-r from-blue-400 to-purple-300 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                <strong>专业方向：</strong> 金融科技 • 全栈开发 • 系统架构 • 数据库设计
+              </p>
+            </div>
+
+            {/* 个人特质 */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                <span className="text-2xl mr-3">⭐</span>
+                工作风格
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Detail-oriented</span>
+                <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Problem solver</span>
+                <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Team player</span>
+                <span className="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Curious learner</span>
+                <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Clean code advocate</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
