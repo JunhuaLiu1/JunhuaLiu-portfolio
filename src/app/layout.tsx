@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Junhua Liu - Portfolio",
-  description: "Web Developer & Designer Portfolio",
+  description: "Junhua Liu 的个人作品集网站 - 展示项目和技能",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
